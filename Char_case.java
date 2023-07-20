@@ -6,26 +6,27 @@ public class Char_case {
         String regNo = sc.nextLine();
 
         char gender = regNo.charAt(7);
-
+        String birth = regNo.substring(0,2);
+        
         System.out.printf("%c %n",gender);
 
         switch (gender){
             case '1': case '3':
                 switch (gender){
                     case '1':
-                        System.out.println("2000년도 이전에 태어난 남성입니다.");
+                        System.out.printf("19%s년생 남성입니다.",birth);
                         break;
                     case '3':
-                        System.out.println("2000년도 이후에 태어난 남성입니다.");
+                        System.out.printf("20%s년생 남성입니다.",birth);
                         break;
                 }
             case '2': case '4':
                 switch (gender) {
                     case '2':
-                        System.out.println("2000년도 이전에 태어난 여성입니다.");
+                        System.out.printf("19%s년생 여성입니다.");
                         break;
                     case '4':
-                        System.out.println("2000년도 이후에 태어난 여성입니다.");
+                        System.out.printf("20%s년생 여성입니다.");
                 }
 
         }
